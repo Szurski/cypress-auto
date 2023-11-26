@@ -1,3 +1,5 @@
+/// <reference types="cypress" />
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -5,19 +7,11 @@
 //
 // For more comprehensive examples of custom
 // commands please read more here:
-// https://on.cypress.io/custom-commands
+// https://on.cypress.io/custom-    
 // ***********************************************
 //
 //
 // -- This is a parent command --
-Cypress.Commands.add('login', (email, password) => {
-    cy.visit('http://localhost:8080/#/admin')
-    cy.contains("account")
-    cy.get("#username").type(email)
-    cy.get("#password").type(password)
-    cy.get('#doLogin').click();
-})
-
 //
 //
 // -- This is a child command --
