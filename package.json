@@ -1,0 +1,9 @@
+{"name":"cypress-auto",
+"author":"Adam Szurma",
+"scripts":{
+  "test": "yarn cypress run"
+},
+  "devDependencies": {
+    "cypress": "^12.5.1"
+  }
+}
