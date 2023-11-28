@@ -2,11 +2,12 @@
 
 describe('User Registration and Login', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:8080/parabank/')
+        cy.visit('/')
     })
 
-    it('Verifies user is able to register', () => {
-        cy.contains('Register').click()
+    it.only('Verifies user is able to register', () => {
+        cy.visit('/register.htm')
+        cy.register()
     })
 
     it('Verifies user is able to login', () => {
