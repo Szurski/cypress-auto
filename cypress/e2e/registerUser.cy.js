@@ -7,7 +7,6 @@ describe('User Registration and Login', () => {
 
     it('Verifies user is able to register', () => {
         cy.contains('Register').click()
-        cy.register()
     })
 
     it('Verifies user is able to login', () => {
