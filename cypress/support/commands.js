@@ -15,6 +15,7 @@ import { faker } from "@faker-js/faker";
 Cypress.Commands.add('register', () =>{
 let password = faker.internet.password()
 let username = faker.internet.userName()
+cy.visit('/register.htm')
 cy.get('#customer\\.firstName').type(faker.person.firstName())
 cy.get('#customer\\.lastName').type(faker.person.lastName())
 cy.get('#customer\\.address\\.street').type(faker.location.street())
