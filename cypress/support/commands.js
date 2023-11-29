@@ -12,8 +12,6 @@ import { faker } from '@faker-js/faker'
 // ***********************************************
 //
 //
-// -- This is a parent command --
-
 Cypress.Commands.add('generateFixture', () => {
     cy.writeFile('cypress/fixtures/registeredUser.json', {
         'firstName': `${faker.person.firstName()}`,
@@ -29,8 +27,6 @@ Cypress.Commands.add('generateFixture', () => {
         'assertion':"Your account was created successfully."
     })
 })
-
-
 //
 //
 // -- This is a child command --
