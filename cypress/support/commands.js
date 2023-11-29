@@ -1,5 +1,6 @@
 /// <reference types="cypress" />
-import { faker } from "@faker-js/faker";
+import { faker } from '@faker-js/faker'
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -11,36 +12,21 @@ import { faker } from "@faker-js/faker";
 // ***********************************************
 //
 //
-// -- This is a parent command --
-Cypress.Commands.add('register', () =>{
-let password = faker.internet.password()
-let username = faker.internet.userName()
-cy.visit('/register.htm')
-cy.get('#customer\\.firstName').type(faker.person.firstName())
-cy.get('#customer\\.lastName').type(faker.person.lastName())
-cy.get('#customer\\.address\\.street').type(faker.location.street())
-cy.get('#customer\\.address\\.city').type(faker.location.city())
-cy.get('#customer\\.address\\.state').type(faker.location.state())
-cy.get('#customer\\.address\\.zipCode').type(faker.location.zipCode())
-cy.get('#customer\\.phoneNumber').type(faker.phone.number())
-cy.get('#customer\\.ssn').type(faker.number.int({ min: 1000000, max: 9999999 }))
-cy.get('#customer\\.username').type(username)
-cy.get('#customer\\.password').type(password)
-cy.get('#repeatedPassword').type(password)
-cy.get('form').contains('Register').click()
-
-cy.contains(`Welcome ${username}`)
-})
-
-Cypress.Commands.add('login', () =>{
-    let password = faker.internet.password()
-    let username = faker.internet.userName()
-    cy.get('input[name="username"').type('john')
-    cy.get('input[name="password"').type('demo')
-    cy.get('form').contains('Log In').click()
-    
-    cy.contains('Welcome John')
+Cypress.Commands.add('generateFixture', () => {
+    cy.writeFile('cypress/fixtures/registeredUser.json', {
+        'firstName': `${faker.person.firstName()}`,
+        'lastName': `${faker.person.lastName()}`,
+        'street': `${faker.location.street()}`,
+        'city': `${faker.location.city()}`,
+        'state': `${faker.location.state()}`,
+        'zipCode': `${faker.location.zipCode()}`,
+        'phoneNo': `${faker.phone.number()}`,
+        'ssn': `${faker.number.int({ min: 1000000, max: 9999999 })}`,
+        'username': `${faker.internet.userName()}`,
+        'password': `${faker.internet.password()}`,
+        'assertion':"Your account was created successfully."
     })
+})
 //
 //
 // -- This is a child command --
