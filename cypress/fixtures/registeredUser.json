@@ -1,13 +1,14 @@
 {
-  "firstName": "Adelia",
-  "lastName": "Upton",
-  "street": "Frami Oval",
-  "city": "Port Julie",
-  "state": "Arkansas",
-  "zipCode": "24376-7054",
-  "phoneNo": "(494) 507-1734 x508",
-  "ssn": "9930930",
-  "username": "Alexander_Larkin38",
-  "password": "u5r8OHPUdygrDwX",
-  "assertion": "Your account was created successfully."
+  "firstName": "Isaias",
+  "lastName": "Braun",
+  "street": "Jakayla Views",
+  "city": "East Cassieland",
+  "state": "Georgia",
+  "zipCode": "86523",
+  "phoneNo": "301-462-3251 x0845",
+  "ssn": "5845956",
+  "username": "Leta.Quigley",
+  "password": "7lJkzV5uxH12Jjw",
+  "assertion": "Your account was created successfully.",
+  "accountCreationAssertion": "Your new account number:"
 }
